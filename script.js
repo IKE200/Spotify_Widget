@@ -1,4 +1,3 @@
-// Example static data — replace with your dynamic Spotify data source
 const data = {
   track: "A Very Very Very Long Song Title That Definitely Needs Scrolling",
   artist: "Cool Artist",
@@ -6,20 +5,21 @@ const data = {
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-  const trackEl = document.getElementById("track");
-  const artistEl = document.getElementById("artist");
-  const coverEl = document.getElementById("cover");
+  const track = document.getElementById("track");
+  const artist = document.getElementById("artist");
+  const cover = document.getElementById("cover");
+  const trackContainer = document.getElementById("track-container");
 
-  trackEl.textContent = data.track;
-  artistEl.textContent = data.artist;
-  coverEl.src = data.cover;
+  track.textContent = data.track;
+  artist.textContent = data.artist;
+  cover.src = data.cover;
 
-  // Wait for the browser to fully render before measuring
   requestAnimationFrame(() => {
-    if (trackEl.scrollWidth > trackEl.clientWidth) {
-      trackEl.classList.add("scroll");
+    const wrapper = document.getElementById("track-wrapper");
+    if (wrapper.scrollWidth > trackContainer.clientWidth) {
+      trackContainer.classList.add("scroll");
     } else {
-      trackEl.classList.remove("scroll");
+      trackContainer.classList.remove("scroll");
     }
   });
 });

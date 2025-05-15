@@ -32,13 +32,18 @@ img {
   position: relative;
 }
 
+#track-wrapper {
+  display: inline-block;
+  white-space: nowrap;
+  min-width: max-content;
+}
+
 #track {
   font-size: 24px;
   font-weight: bold;
-  white-space: nowrap;
   display: inline-block;
-  position: relative;
-  min-width: max-content; /* ← important */
+  white-space: nowrap;
+  padding-right: 50px; /* optional spacing for loop effect */
 }
 
 #artist {
@@ -49,7 +54,7 @@ img {
   text-overflow: ellipsis;
 }
 
-.scroll {
+.scroll #track-wrapper {
   animation: scroll-left 10s linear infinite;
 }
 
