@@ -26,11 +26,18 @@ img {
   width: 100%;
 }
 
+#track-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 #track {
   font-size: 24px;
   font-weight: bold;
   white-space: nowrap;
-  overflow: hidden;
+  display: inline-block;
+  position: relative;
 }
 
 #artist {
