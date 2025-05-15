@@ -1,6 +1,6 @@
-// Example data — replace with your actual Spotify API values
+// Example static data — replace with your dynamic Spotify data source
 const data = {
-  track: "A Very Very Very Long Song Title That Needs Scrolling",
+  track: "A Very Very Very Long Song Title That Definitely Needs Scrolling",
   artist: "Cool Artist",
   cover: "https://i.scdn.co/image/ab67616d00001e02a0354b0310d9a6b3b3b64dd3"
 };
@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
   artistEl.textContent = data.artist;
   coverEl.src = data.cover;
 
-  // Wait for DOM paint to complete before measuring
+  // Wait for the browser to fully render before measuring
   requestAnimationFrame(() => {
     if (trackEl.scrollWidth > trackEl.clientWidth) {
       trackEl.classList.add("scroll");
