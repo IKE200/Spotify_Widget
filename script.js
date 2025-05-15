@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
   requestAnimationFrame(() => {
     const wrapper = document.getElementById("track-wrapper");
     const threshold = 500; // pixels of buffer
-    if (wrapper.scrollWidth > trackContainer.clientWidth + threshold) {
+    if (wrapper.scrollWidth + threshold > trackContainer.clientWidth) {
       trackContainer.classList.add("scroll");
     } else {
       trackContainer.classList.remove("scroll");
